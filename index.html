@@ -4,16 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qytrine Studios</title>
+    <style>
+        /* Import a clean, modern font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --primary: #00ffaa;
+            --accent: #ffaa00;
+            --text: #e0e0e0;
+            --button-bg: #007acc;
+            --button-hover: #005fa3;
+            --radius: 10px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 750px;
+        }
+
+        button {
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-2px);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world.</h1>
+    <h1>Qytrine Studios</h1>
 
-    <div>
+    <div class="card">
         <h2>Development</h2>
-        <p>this is work one of our developers has done, he has assisted us in uploading the game to Xbox:</p>
-        <a href="https://www.youtube.com/watch?v=InvhKHUbU9U" download>
-            <button>Watch Teaser</button>
-        </a>
+        <p>This is work one of our developers has done. He has assisted us in uploading the game to Xbox:</p>
+        
+        <div class="button-group">
+            <a href="https://www.youtube.com/watch?v=InvhKHUbU9U" download>
+                <button>Watch Teaser</button>
+            </a>
+            <a href="beta-footage.mp4">
+                <button>Watch Beta Footage</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>
